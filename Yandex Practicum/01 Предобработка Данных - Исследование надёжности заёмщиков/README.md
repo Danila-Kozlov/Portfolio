@@ -5,4 +5,6 @@
 # Используемые библиотеки:
 * pandas; 
 * pymystem3; 
-* ntlk.
+* ntlk;
+* matplotlib;
+* seaborn.
