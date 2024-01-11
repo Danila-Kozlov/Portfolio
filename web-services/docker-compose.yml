@@ -4,5 +4,8 @@ services:
     build: .
     ports: 
       - "5000:5000"
-    command: flask --app hello run --host=localhost
-    
+    command: gunicorn -b 0.0.0.0:5000 'hello:app' --reload
+    volumes: 
+      - ./:/work_dir  
+    environment:
+      - PYTHONUNBUFFERED=True
